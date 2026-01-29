@@ -38,7 +38,7 @@ public class Course {
     }
 
     private boolean isShort() {
-        return durationInMinutes.compareTo(MAX_MINUTES_SHORT_COURSES) < 0;
+        return durationInMinutes.compareTo(MAX_MINUTES_SHORT_COURSES) <= 0;
     }
 
     private String getTitle() {
