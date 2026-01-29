@@ -6,7 +6,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class CourseTest {
     @Test
-    public void fix_me_and_rename_me() {
-        assertThat(true).isEqualTo(false);
+    public void canary_test_case_to_check_configuration() {
+        assertThat(true).isTrue();
     }
 }
