@@ -2,14 +2,13 @@ package unit_tests;
 
 import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class TripServiceTest {
 
     @Test
     public void fix_me() {
-        assertThat(true, is(false));
+        assertThat(true).isEqualTo(false);
     }
 }
 
