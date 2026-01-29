@@ -24,17 +24,3 @@ When showing course details, the following information is presented in order:
 1. A course must be started before it can track duration
 2. Duration is only calculated after the course has ended
 3. Course details can be displayed at any time, reflecting the current state of the course
-
-## Your task
-
-Test the behaviour of `Course` class using test doubles created with a library.
-
-## Learnings
-
-* Recognizing interaction types.
-* Selecting the right type of test double for each interaction.
-* How to use a library to create and configure the test doubles.
-
-## Tools
-
-[Mockito](http://mockito.org/)
