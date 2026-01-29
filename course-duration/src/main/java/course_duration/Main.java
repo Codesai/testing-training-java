@@ -1,5 +1,6 @@
 package course_duration;
 
+import course_duration.domain.Course;
 import course_duration.infrastructure.ConsoleCourseView;
 import course_duration.infrastructure.EnvConfiguration;
 import course_duration.infrastructure.SystemClock;

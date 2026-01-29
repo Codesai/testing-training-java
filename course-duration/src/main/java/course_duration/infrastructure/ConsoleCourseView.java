@@ -1,6 +1,6 @@
 package course_duration.infrastructure;
 
-import course_duration.CourseView;
+import course_duration.domain.CourseView;
 
 public class ConsoleCourseView implements CourseView {
     @Override

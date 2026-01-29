@@ -1,6 +1,6 @@
 package course_duration.infrastructure;
 
-import course_duration.Configuration;
+import course_duration.domain.Configuration;
 
 public class EnvConfiguration implements Configuration {
     @Override

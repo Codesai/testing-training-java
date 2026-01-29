@@ -1,6 +1,4 @@
-package course_duration;
-
-import course_duration.infrastructure.ConsoleCourseView;
+package course_duration.domain;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -15,20 +13,18 @@ public class Course {
     private Duration durationInMinutes;
     private final CourseView courseView;
 
-    public Course(String name, Configuration configuration, Clock clock, ConsoleCourseView courseView) {
+    public Course(String name, Configuration configuration, Clock clock, CourseView courseView) {
         this.name = name;
         this.configuration = configuration;
         this.clock = clock;
-        durationInMinutes = Duration.ofMinutes(0);
         this.courseView = courseView;
+        durationInMinutes = Duration.ofMinutes(0);
     }
 
     public void showDetails() {
-        String line1 = "Title: " + getTitle();
-        this.courseView.displayLine(line1);
+        this.courseView.displayLine("Title: " + getTitle());
         this.courseView.displayLine("Duration: " + durationInMinutes.toMinutes() + " minutes");
-        String line = "Type: " + (isShort() ? "short" : "long");
-        this.courseView.displayLine(line);
+        this.courseView.displayLine("Type: " + (isShort() ? "short" : "long"));
     }
 
     public void start() {

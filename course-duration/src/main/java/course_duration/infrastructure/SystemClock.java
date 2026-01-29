@@ -1,6 +1,6 @@
 package course_duration.infrastructure;
 
-import course_duration.Clock;
+import course_duration.domain.Clock;
 
 import java.time.Instant;
 

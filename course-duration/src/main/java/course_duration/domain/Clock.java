@@ -1,4 +1,4 @@
-package course_duration;
+package course_duration.domain;
 
 import java.time.Instant;
 
