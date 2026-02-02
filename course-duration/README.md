@@ -24,3 +24,28 @@ When showing course details, the following information is presented in order:
 1. A course must be started before it can track duration
 2. Duration is only calculated after the course has ended
 3. Course details can be displayed at any time, reflecting the current state of the course
+
+
+## Tools
+
+### 1. Test coverage tool.
+
+#### To launch:
+
+`$ make coverage`
+
+#### To see the coverage report in firefox:
+
+`$ make coverage-report`
+
+### 2. Mutation testing
+
+#### To launch:
+
+`$ make mutant-tests`
+
+#### To see the mutants report in firefox:
+
+`$ make coverage-report`
+
+
