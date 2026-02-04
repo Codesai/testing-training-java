@@ -12,11 +12,11 @@
 2. A course is classified as "long" if its duration is 10 minutes or more
 
 ### Information Display
-When showing course details, the following information is presented in order:
+When showing course details on the console, the following information is presented in order:
 1. The course title, which consists of:
     - The course name
     - The college name (obtained from configuration)
-    - If no college is configured, "not found" is used instead
+    - If no college name is configured, "not found" is used instead
 2. The current duration in minutes
 3. The course type (either "short" or "long")
 
