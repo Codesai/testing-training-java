@@ -25,6 +25,10 @@ When showing course details on the console, the following information is present
 2. Duration is only calculated after the course has ended
 3. Course details can be displayed at any time, reflecting the current state of the course
 
+## Help
+
+[Examples of using spying and stubbing with mockito](https://gist.github.com/trikitrok/1573df976f090f46f3b188646de8b3be)
+
 
 ## Tools
 
