@@ -34,11 +34,10 @@ public class Course {
     public void end() {
         var endTime = clock.now();
         durationInMinutes = computeMinutesBetween(startTime, endTime);
-        System.out.println(durationInMinutes);
     }
 
     private boolean isShort() {
-        return durationInMinutes.compareTo(MAX_MINUTES_SHORT_COURSES) <= 0;
+        return durationInMinutes.compareTo(MAX_MINUTES_SHORT_COURSES) < 0;
     }
 
     private String getTitle() {
@@ -52,7 +51,7 @@ public class Course {
     private String getCollege() {
         String college = configuration.getValue("COLLEGE");
         if (college == null) {
-            return "not found";
+            return "ups! ->";
         }
         return college;
     }
