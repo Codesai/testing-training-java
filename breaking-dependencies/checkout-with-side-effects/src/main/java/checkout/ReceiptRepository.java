@@ -8,7 +8,11 @@ public class ReceiptRepository {
     private static final String User = "store";
     private static final String Pass = "123456";
 
-    public static void store(Receipt receipt) {
+    public static ReceiptRepository create() {
+        return new ReceiptRepository();
+    }
+
+    public void store(Receipt receipt) {
         String url = "jdbc:mysql://localhost:3306/" + DatabaseName + "?serverTimezone=UTC";
 
         try (Connection connection = DriverManager.getConnection(url, User, Pass)) {
