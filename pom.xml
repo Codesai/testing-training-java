@@ -14,6 +14,9 @@
     <module>breaking-dependencies/checkout-with-side-effects</module>
     <module>breaking-dependencies/problematic-discount</module>
     <module>breaking-dependencies/problematic-searcher</module>
+    <module>ugly-trivia</module>
+    <module>ugly-trivia-approval</module>
+    <module>gilded-rose</module>
   </modules>
 
   <build>
