@@ -11,6 +11,6 @@ public class SamplingHelper {
                 .map(formatter)
                 .forEach(joiner::add);
 
-        System.out.println("Arrays.asList(" + joiner + ")");
+        System.out.println("Arrays.asList(" + joiner + ");");
     }
 }
