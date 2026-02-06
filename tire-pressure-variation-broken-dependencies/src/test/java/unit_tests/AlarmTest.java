@@ -3,23 +3,29 @@ package unit_tests;
 import org.junit.jupiter.api.Test;
 import tirepressuremonitoringsystem.Alarm;
 
-import java.util.ArrayList;
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class AlarmTest {
+class AlarmTest {
+
+    private AlarmForTesting alarm;
 
     @Test
-    public void alarm_activates_when_pressure_is_too_low() {
-        var alarm = alarmSampling(10.0);
-        
+    void alarm_activates_when_pressure_is_too_low() {
+        alarm = alarmSampling(10.0);
+
         alarm.check();
-        
-        assertThat(alarm.shownMessages).isEqualTo(List.of("Alarm activated!"));
+
+        checkShownMessagesWere("Alarm activated!");
+    }
+
+    private void checkShownMessagesWere(String... expectedMessages) {
+        assertThat(alarm.shownMessages).isEqualTo(Arrays.asList(expectedMessages));
+    }
+
+    private AlarmForTesting alarmSampling(Double... values) {
+        return new AlarmForTesting(values);
     }
 
     static class AlarmForTesting extends Alarm {
@@ -41,10 +47,6 @@ public class AlarmTest {
         protected double sampleValue() {
             return sampledValues.remove();
         }
-    }
-
-    private AlarmForTesting alarmSampling(Double... values) {
-        return new AlarmForTesting(values);
     }
 }
 
