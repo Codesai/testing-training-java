@@ -11,10 +11,12 @@
     <module>argent-rose</module>
     <module>course-duration</module>
     <module>tire-pressure-variation</module>
+    <module>tire-pressure-variation-broken-dependencies</module>
     <module>breaking-dependencies/checkout-with-side-effects</module>
     <module>breaking-dependencies/problematic-discount</module>
     <module>breaking-dependencies/problematic-searcher</module>
     <module>ugly-trivia</module>
+    <module>ugly-trivia-broken-dependencies</module>
     <module>ugly-trivia-approval</module>
     <module>gilded-rose</module>
   </modules>
