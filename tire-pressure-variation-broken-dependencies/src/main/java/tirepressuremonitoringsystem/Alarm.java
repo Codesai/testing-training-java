@@ -2,8 +2,8 @@ package tirepressuremonitoringsystem;
 
 public class Alarm {
 
-    private static final int LOW_PRESSURE_THRESHOLD = 17;
-    private static final int MAX_PRESSURE_THRESHOLD = 21;
+    private static final double LOW_PRESSURE_THRESHOLD = 17;
+    private static final double MAX_PRESSURE_THRESHOLD = 21;
     private final Sensor sensor = new Sensor();
 
     private boolean alarmOn = false;
@@ -11,13 +11,13 @@ public class Alarm {
     public void check() {
         double psiPressureValue = sampleValue();
 
-        if (psiPressureValue < (double) LOW_PRESSURE_THRESHOLD || (double) MAX_PRESSURE_THRESHOLD < psiPressureValue) {
-            if(!isAlarmOn()) {
+        if (psiPressureValue < LOW_PRESSURE_THRESHOLD || MAX_PRESSURE_THRESHOLD < psiPressureValue) {
+            if (!isAlarmOn()) {
                 alarmOn = true;
                 showMessage("Alarm activated!");
             }
         } else {
-            if(isAlarmOn()) {
+            if (isAlarmOn()) {
                 alarmOn = false;
                 showMessage("Alarm deactivated!");
             }
