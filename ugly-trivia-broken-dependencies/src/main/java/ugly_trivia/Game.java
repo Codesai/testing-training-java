@@ -10,13 +10,12 @@ public class Game {
     private final int[] places = new int[6];
     private final int[] purses = new int[6];
     private final boolean[] inPenaltyBox = new boolean[6];
-    private int currentPlayer;
-    private boolean isGettingOutOfPenaltyBox;
-
     private final LinkedList<String> popQuestions = new LinkedList<>();
     private final LinkedList<String> scienceQuestions = new LinkedList<>();
     private final LinkedList<String> sportsQuestions = new LinkedList<>();
     private final LinkedList<String> rockQuestions = new LinkedList<>();
+    private int currentPlayer;
+    private boolean isGettingOutOfPenaltyBox;
     private Random rand;
 
     public Game() {
@@ -43,18 +42,6 @@ public class Game {
         } while (notAWinner);
     }
 
-    protected boolean isAnswerRight() {
-        return rand.nextInt(9) == 7;
-    }
-
-    protected int getRollResult() {
-        return rand.nextInt(5) + 1;
-    }
-
-    private String createRockQuestion(int index) {
-        return "Rock Question " + index;
-    }
-
     public boolean add(String playerName) {
         players.add(playerName);
         places[howManyPlayers()] = 0;
@@ -66,8 +53,20 @@ public class Game {
         return true;
     }
 
+    protected boolean isAnswerRight() {
+        return rand.nextInt(9) == 7;
+    }
+
+    protected int getRollResult() {
+        return rand.nextInt(5) + 1;
+    }
+
     protected void showMessage(String message) {
         System.out.println(message);
+    }
+
+    private String createRockQuestion(int index) {
+        return "Rock Question " + index;
     }
 
     private int howManyPlayers() {
@@ -89,8 +88,8 @@ public class Game {
                 }
 
                 showMessage(players.get(currentPlayer)
-                        + "'s new location is "
-                        + places[currentPlayer]);
+                                    + "'s new location is "
+                                    + places[currentPlayer]);
                 showMessage("The category is " + currentCategory());
                 askQuestion();
             } else {
@@ -104,8 +103,8 @@ public class Game {
             }
 
             showMessage(players.get(currentPlayer)
-                    + "'s new location is "
-                    + places[currentPlayer]);
+                                + "'s new location is "
+                                + places[currentPlayer]);
             showMessage("The category is " + currentCategory());
             askQuestion();
         }
@@ -161,9 +160,9 @@ public class Game {
                 showMessage("Answer was correct!!!!");
                 purses[currentPlayer]++;
                 showMessage(players.get(currentPlayer)
-                        + " now has "
-                        + purses[currentPlayer]
-                        + " Gold Coins.");
+                                    + " now has "
+                                    + purses[currentPlayer]
+                                    + " Gold Coins.");
 
                 boolean winner = didPlayerWin();
                 currentPlayer++;
@@ -181,9 +180,9 @@ public class Game {
             showMessage("Answer was correct!!!!");
             purses[currentPlayer]++;
             showMessage(players.get(currentPlayer)
-                    + " now has "
-                    + purses[currentPlayer]
-                    + " Gold Coins.");
+                                + " now has "
+                                + purses[currentPlayer]
+                                + " Gold Coins.");
 
             boolean winner = didPlayerWin();
             currentPlayer++;
