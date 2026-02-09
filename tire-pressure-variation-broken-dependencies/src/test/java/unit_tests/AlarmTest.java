@@ -39,7 +39,7 @@ class AlarmTest {
         }
 
         @Override
-        protected void showMessage(String message) {
+        protected void notify(String message) {
             shownMessages.add(message);
         }
 

@@ -14,17 +14,17 @@ public class Alarm {
         if (psiPressureValue < LOW_PRESSURE_THRESHOLD || MAX_PRESSURE_THRESHOLD < psiPressureValue) {
             if (!isAlarmOn()) {
                 alarmOn = true;
-                showMessage("Alarm activated!");
+                notify("Alarm activated!");
             }
         } else {
             if (isAlarmOn()) {
                 alarmOn = false;
-                showMessage("Alarm deactivated!");
+                notify("Alarm deactivated!");
             }
         }
     }
 
-    protected void showMessage(String message) {
+    protected void notify(String message) {
         System.out.println(message);
     }
 
