@@ -43,12 +43,12 @@ public class Game {
         } while (notAWinner);
     }
 
-    protected int getRollResult() {
-        return rand.nextInt(5) + 1;
-    }
-
     protected boolean isAnswerRight() {
         return rand.nextInt(9) == 7;
+    }
+
+    protected int getRollResult() {
+        return rand.nextInt(5) + 1;
     }
 
     private String createRockQuestion(int index) {
@@ -66,8 +66,8 @@ public class Game {
         return true;
     }
 
-    protected void showMessage(String playerName) {
-        System.out.println(playerName);
+    protected void showMessage(String message) {
+        System.out.println(message);
     }
 
     private int howManyPlayers() {
@@ -84,9 +84,7 @@ public class Game {
 
                 showMessage(players.get(currentPlayer) + " is getting out of the penalty box");
                 places[currentPlayer] = places[currentPlayer] + roll;
-                if (places[currentPlayer] > 11) {
-                    places[currentPlayer] = places[currentPlayer] - 12;
-                }
+                roundPlace(places, currentPlayer);
 
                 showMessage(players.get(currentPlayer)
                         + "'s new location is "
@@ -99,15 +97,19 @@ public class Game {
             }
         } else {
             places[currentPlayer] = places[currentPlayer] + roll;
-            if (places[currentPlayer] > 11) {
-                places[currentPlayer] = places[currentPlayer] - 12;
-            }
+            roundPlace(places, currentPlayer);
 
             showMessage(players.get(currentPlayer)
                     + "'s new location is "
                     + places[currentPlayer]);
             showMessage("The category is " + currentCategory());
             askQuestion();
+        }
+    }
+
+    public static void roundPlace(int[] places, int currentPlayer) {
+        if (places[currentPlayer] > 11) {
+            places[currentPlayer] = places[currentPlayer] - 12;
         }
     }
 
