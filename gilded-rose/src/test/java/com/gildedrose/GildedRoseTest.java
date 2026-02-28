@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +13,6 @@ public class GildedRoseTest {
 
         app.updateQuality();
 
-        assertEquals("fixme", app.items[0].name);
+        assertThat(app.items[0].name).isEqualTo("fixme");
     }
 }
