@@ -68,7 +68,7 @@
                         <param>course_duration.domain.Course</param>
                     </targetClasses>
                     <targetTests>
-                        <param>Unit_test.unit_tests.CourseTest</param>
+                        <param>unit_tests.CourseTest</param>
                     </targetTests>
                     <verbose>false</verbose>
                     <!--threads>3</threads-->
