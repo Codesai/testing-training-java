@@ -29,6 +29,13 @@ When showing course details on the console, the following information is present
 
 [Examples of using spying and stubbing with mockito](https://gist.github.com/trikitrok/1573df976f090f46f3b188646de8b3be)
 
+### To create Instant objects for the tests use the following helper:
+
+```java
+private Instant aTimeInMinutes(double minutes) {
+    return Instant.ofEpochMilli((long) (minutes * 60 * 1000));
+}
+```
 
 ## Tools
 
@@ -51,5 +58,3 @@ When showing course details on the console, the following information is present
 #### To see the mutants report in firefox:
 
 `$ make coverage-report`
-
-
